@@ -3,7 +3,9 @@
   var queryString = window.location.search;
   var urlParams = new URLSearchParams(queryString);
   var inspectLink = urlParams['link'];
-  location = inspectLink;
+  var steamId = inspectLink.substring(inspectLink.indexOf('S'), 17);
+  var assetId = inspectLink.substring(inspectLink.indexOf('A'), 11);
+  top.location = 'https://steamcommunity.com/profiles/' + steamId + '/inventory/#730_2_' + assetId;
 </script>
 </body>
 </html>
